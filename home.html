@@ -42,20 +42,21 @@
 		}
 		PosX = PosX - ImgPos[0];
 		PosY = PosY - ImgPos[1];
-		link = "http://tracking.thinknear.com/?token=xyz&event=position-"+PosX+"-"+PosY
+		link = "/?token=xyz&event=position-"+PosX+"-"+PosY
 		
-		document.getElementById("preview").innerHTML = link;
+		document.getElementById("preview").innerHTML = location.href + link;
+
 	}
-</script>
+	</script>
 </head>
 <body>
 
-<img id="xy-track" alt="" src="http://tech128.com/wp-content/uploads/2013/12/mobile-banner-320x50.png" width="320" height="50" />
+	<img id="xy-track" alt="" src="http://tech128.com/wp-content/uploads/2013/12/mobile-banner-320x50.png" width="320" height="50" />
 	<script type="text/javascript">
 	var myImg = document.getElementById("xy-track");
 	myImg.onmousedown = GetCoordinates;
-</script>
+	</script>
 
-<p id="preview"></p>
+	<p id="preview"></p>
 </body>
 </html>
