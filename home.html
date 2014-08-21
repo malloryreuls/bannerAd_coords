@@ -42,8 +42,10 @@
 		}
 		PosX = PosX - ImgPos[0];
 		PosY = PosY - ImgPos[1];
-		document.getElementById("x").innerHTML = PosX;
-		document.getElementById("y").innerHTML = PosY;
+		link = "http://tracking.thinknear.com/?token=xyz&event=position-"+PosX+"-"+PosY
+		// document.getElementById("x").innerHTML = PosX;
+		// document.getElementById("y").innerHTML = PosY;
+		document.getElementById("preview").innerHTML = link;
 	}
 </script>
 </head>
@@ -55,6 +57,6 @@
 	myImg.onmousedown = GetCoordinates;
 </script>
 
-<p>http://tracking.thinknear.com/?token=xyz&event=position-<span id="x"></span>-<span id="y"></span></p>
+<p id="preview"></p>
 </body>
 </html>
